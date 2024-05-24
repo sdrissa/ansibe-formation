@@ -24,7 +24,7 @@ pipeline {
             steps{
                  sh 'docker stop demo-bceao || true'
                  sh 'docker rm demo-bceao || true'
-                 sh 'docker run -d -p 8180:8180 --name demo-bceao demo-boot'
+                 sh 'docker run -d -p 8180:8180 --name demo-bceao demo-boot:$BUILD_NUMBER'
             }
         }
     }

@@ -21,7 +21,6 @@ pipeline {
             }
         }
            stage('run image'){
-            when { expression { false } }
             steps{
                  sh 'docker stop demo-bceao || true'
                  sh 'docker rm demo-bceao || true'

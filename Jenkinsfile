@@ -12,7 +12,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-              stage('Build image'){
+              stage('Build and psh image'){
             steps{
                 withDockerRegistry([credentialsId: "242b355f-b71f-4ab8-9a4e-b191b0aca71b", url: ""]) {
                     sh 'docker build -t dorsis/demo-bceao:$BUILD_NUMBER .'
